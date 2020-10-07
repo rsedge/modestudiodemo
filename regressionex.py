@@ -18,8 +18,8 @@ def predict(X):
             if (isinstance(cell,int) or isinstance(cell,float)):
                 rowsum = rowsum + cell*random.uniform(0,1)
             else:
-        rowsum = rowsum + random.uniform(0,1)
-        Y.itemset((rownum,0),rowsum)
+                rowsum = rowsum + random.uniform(0,1)
+            Y.itemset((rownum,0),rowsum)
         rownum = rownum + 1
     return pd.DataFrame(Y, columns=['pred_val'])
 
